@@ -1,0 +1,144 @@
+<!-- Task: Build an Advanced Registration Form
+
+Instructions:
+Create an HTML registration form with the following fields and apply HTML5 form validations. No CSS or JavaScript should be used.
+
+Requirements:
+Heading: User Registration Form
+Form attributes:
+•	method="get"
+•	action="#"
+
+Fields to include:
+Full Name → text input (required, min length 3, max length 50)
+Username → text input (required, pattern: only letters & numbers, min length 5, max length 15)
+Email Address → email input (required)
+Password → password input (required, min length 6, max length 20)
+Confirm Password → password input (required, min length 6, max length 20)
+Phone Number → tel input (required, pattern: 10 digits)
+Gender → radio buttons (Male, Female, Other) – required
+Date of Birth → date input (required)
+Age → number input (required, min="18", max="60")
+Country → select dropdown (India, USA, UK, Canada, Other) – required
+Skills → checkboxes (HTML, CSS, JavaScript, React, Node.js)
+Website → url input (optional)
+Profile Picture → file upload (accept only images: .jpg, .png)
+About Yourself → textarea (max length 200)
+Buttons → Submit button & Reset button -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <header>
+        <h1>User Registration form</h1>
+    </header>
+    <main>
+        <form action="#" method="get">
+
+        <div>
+            <label for="name">Full name: </label>
+            <input type="text" name="name" id="name" minlength="3" maxlength="50" placeholder="Enter name" required>
+        </div><br>
+
+        <div>
+            <label for="uname">Username: </label>
+            <input type="text" name="uname" id="uname" pattern="[A-Za-z0-9]{5,15}" minlength="5" maxlength="15" placeholder="Enter username">
+        </div><br>
+
+        <div>
+            <label for="mail">Email: </label>
+            <input type="email" name="mail" id="mail" placeholder="Enter your mail" required>
+        </div><br>
+
+        <div>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass" minlength="6" maxlength="20" placeholder="Enter password" required>
+        </div><br>
+
+        <div>
+            <label for="cpass">Confirm Password: </label>
+            <input type="password" name="cpass" id="cpass" minlength="6" maxlength="20" placeholder="Enter password" required >
+        </div><br>
+
+        <div>
+            <label for="pno">Phone number: </label>
+            <input type="text" name="pno" id="pno" pattern="[0-9]{10}" placeholder="Enter phone number" required>
+        </div><br>
+
+        <div>
+            <label for="gender">Gender: </label>
+
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div><br>
+
+        <div>
+            <label for="dob">Date of birth: </label>
+            <input type="date" name="dob" id="dob" min="2007/01/01" max="2049/01/01">
+        </div><br>
+
+        <div>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="18" max="60" placeholder="limited">
+        </div><br>
+
+        <div>
+            <label for="country">Country: </label>
+            <select name="country" id="country">
+                <option value="">--Select--</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+                <option value="other">Other</option>
+            </select>
+        </div><br>
+
+        <div>
+            <label for="skill">Skills: </label>
+            <br>
+            <input type="checkbox" name="skill" id="html" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="skill" id="css" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="skill" id="javascript" value="javascript">
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" name="skill" id="react" value="react">
+            <label for="react">React</label>
+        </div><br>
+
+        <div>
+            <label for="website">Website: </label>
+            <input type="url" name="website" id="website" placeholder="Enter url">
+        </div><br>
+
+        <div>
+            <label for="photo">Profile Photo</label>
+            <input type="file" name="photo" id="photo" accept=".jpg, .png">
+        </div><br>
+        <div>
+            <label for="comment">About Yourself: </label>
+            <textarea name="comment" id="comment" placeholder="Enter Instructions"></textarea>
+        </div><br>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div><br>
+        </form>
+    </main>
+
+    <footer>
+        Form submission &copy; 
+    </footer>
+</body>
+</html>
